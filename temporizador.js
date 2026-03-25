@@ -1,31 +1,39 @@
-// Fecha de destino
-const fechaDestino = new Date('2026-05-09T21:00:00').getTime();
+const contador = document.getElementById('contador');
 
-// Actualiza el temporizador cada segundo
-const intervalo = setInterval(function() {
+if (contador) {
+  const fechaObjetivo = contador.dataset.target || '2026-05-09T21:00:00';
+  const fechaDestino = new Date(fechaObjetivo).getTime();
 
-    // Obtén la fecha y hora actuales
+  const ids = {
+    dias: document.getElementById('dias'),
+    horas: document.getElementById('horas'),
+    minutos: document.getElementById('minutos'),
+    segundos: document.getElementById('segundos')
+  };
+
+  const actualizarTemporizador = () => {
     const ahora = new Date().getTime();
-
-    // Calcula la diferencia entre la fecha destino y la fecha actual
     const distancia = fechaDestino - ahora;
 
-    // Calcula los días, horas, minutos y segundos restantes
+    if (distancia <= 0) {
+      if (ids.dias) ids.dias.textContent = '0';
+      if (ids.horas) ids.horas.textContent = '0';
+      if (ids.minutos) ids.minutos.textContent = '0';
+      if (ids.segundos) ids.segundos.textContent = '0';
+      return;
+    }
+
     const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
     const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    // Muestra el tiempo restante
-    document.getElementById('dias').innerHTML = dias;
-    document.getElementById('horas').innerHTML = horas;
-    document.getElementById('minutos').innerHTML = minutos;
-    document.getElementById('segundos').innerHTML = segundos;
+    if (ids.dias) ids.dias.textContent = dias;
+    if (ids.horas) ids.horas.textContent = horas;
+    if (ids.minutos) ids.minutos.textContent = minutos;
+    if (ids.segundos) ids.segundos.textContent = segundos;
+  };
 
-    // Si el temporizador ha terminado, muestra un mensaje
-    if (distancia <= 0) {
-        clearInterval(intervalo);
-        document.getElementById('contador').innerHTML = "¡El evento ha comenzado!";
-    }
-
-}, 1000);
+  actualizarTemporizador();
+  setInterval(actualizarTemporizador, 1000);
+}
