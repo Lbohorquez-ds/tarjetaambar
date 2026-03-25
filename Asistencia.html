@@ -1,149 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistencia | Ámbar</title>
   <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="StyleIndex.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-    table {
-      width: 50%;
-      border-collapse: collapse;
-      margin: 20px auto;
-      border: 4px solid #E3F3FB;
-    }
-
-    th,
-    td {
-      border: 4px solid #E3F3FB;
-      padding: 8px;
-      text-align: center;
-    }
-
-    th {
-      background-color: white;
-    }
-  </style>
-
-  <title>Invitación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="modal" id="modal">
-    <div class="contenido-modal">
-      <img src="" alt="" class="img-modal" id="img-modal">
-    </div>
-    <div class="modal-btn" id="modal-btn"></div>
-  </div>
-  <a href="https://wa.me/5491160279646" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    
+  <a href="https://wa.me/5491132421643" class="btn-wsp" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
   <header class="header-principal">
     <nav class="nav-principal">
       <div class="contenedor contenedor-flex">
+        <div class="nav-brand">
+          <span class="nav-brand-title">Ámbar</span>
+          <span class="nav-brand-subtitle">Mis quince años</span>
+        </div>
 
-        <span class="icon-menu" id="btnMenu">
-          <i class="fas fa-align-justify"></i>
+        <span class="icon-menu" id="btnMenu" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
         </span>
 
         <ul class="menu" id="menu">
-          <li class="menu-item"><a href="index.html" class="menu-link menu-link_select a">Inicio</a></li>
-          <li class="menu-item"><a href="DondeCuando.html" class="menu-link a">Donde/Cuando</a></li>
-          <li class="menu-item"><a href="DressCode.html" class="menu-link a">Dress Code</a></li>
-          <li class="menu-item"><a href="Asistencia.html" class="menu-link a">Confirmación de asistencia</a></li>
+          <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
+          <li class="menu-item"><a href="DondeCuando.html" class="menu-link">Dónde y cuándo</a></li>
+          <li class="menu-item"><a href="DressCode.html" class="menu-link">Vestimenta</a></li>
+          <li class="menu-item"><a href="Asistencia.html" class="menu-link menu-link_select">Asistencia</a></li>
+          <li class="menu-item"><a href="Regalo.html" class="menu-link">Regalo</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-
-    <main class="main">
-    <section class="banner">
-      <img src="Fotos/Portada.jpg" alt="" class="img-banner">
-      <div class="contenido-banner">Mis quince años</div>
+  <main class="main">
+    <section class="page-section">
+      <div class="contenedor">
+        <div class="image-frame">
+          <img src="Fotos/Asistencia.png" alt="Confirmación de asistencia" class="full-image">
+        </div>
+      </div>
     </section>
 
-   <section class="direccion">
-       <img src="Fotos/Asistencia.jpg" alt="" width="100%">
-        <p></p>  
-        <p class="segundo_direccion">Por favor, confirma si podrás acompañarme en este día tan especial.</p>
-        <!-- Botón para abrir Google Forms -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSff21nVp5OdBJt0l_mi7oVLkFJB-xEMguWLmKMu77xA9vREEA/viewform" target="_blank" class="maps-button">Confirma tu asistencia</a>
-        <img src="Fotos/Confirmacion.jpg" alt="" class="dia_hora_fiesta">
-</section>
-
+    <section class="page-section">
+      <div class="contenedor">
+        <div class="cta-card">
+          <h2>Reservá tu lugar</h2>
+          <p>Llenando el formulario a continuación:</p>
+          <div class="button-row">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctnsKZTW9S0J9orVU9vp6QSWBOj9yuNaJAbXwCQa6DhRFCTg/viewform?usp=sharing&ouid=114234541421818908394" target="_blank" rel="noopener noreferrer" class="elegant-button">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              Formulario
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-<footer class="footer-principal">
-    <div class="contenedor contenedor-flex">
-      <div class="columna  columna-flex-footer">
-        <h2 class="titulo-columna">¡Gracias por acompañarme<br> en este momento<br> tan importante!</h2>
-    </div>
-    <div class="columna  columna-flex-footer">
-          <h2 class="titulo-columna">Sigueme y etiquetame...</h2>
-           <a href="https://www.instagram.com/amb4r._2104?igsh=MW5wMnkxaXVtdTJrdA=="><!--
-tags: [logo, app, application, images, photos, videos, post, stories, online, community]
-category: Brand
-version: "1.9"
-unicode: "ec20"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="30"
-  height="30"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#9e9e9e"
-  stroke-width="1.5"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-  <path d="M16.5 7.5l0 .01" />
-</svg>
-</a>
-    </div>        
-    <div class="columna  columna-flex-footer">
-        <h2 class="titulo-columna">Sube y mira las fotos aqui...</h2>
-        <a href="https://mega.nz/folder/r9hUWLYA#eGt1raH-YWh3JbhmQ2Fu8Q"><!--
-category: Media
-version: "2.10"
-unicode: "f835"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="30"
-  height="30"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#9e9e9e"
-  stroke-width="1.5"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M11 20h-6a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v4" />
-  <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-  <path d="M15 19l2 2l4 -4" />
-</svg>
+  <footer class="footer-principal">
+  <div class="contenedor">
+    <div class="footer-linea"></div>
 
-</a>
+    <div class="footer-grid-tres">
+      
+      <div class="footer-block">
+        <span class="footer-titulo">¡Gracias por acompañarme!</span>
       </div>
 
-    </div>
-    <div class="copy">La mejor fiesta @2026</div>
-  </footer>
+      <div class="footer-block">
+        <span class="footer-titulo">Instagram</span>
+        <a href="https://www.instagram.com/amb4r._2104?igsh=MW5wMnkxaXVtdTJrdA==" class="footer-icon-link" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
 
-  <script src="modal.js"></script>
+      <div class="footer-block">
+        <span class="footer-titulo">Drive</span>
+        <a href="https://drive.google.com/drive/folders/1D_s4CsNhWzYPcOfbTa0AiAgnziIgGuwS?usp=drive_link" class="footer-icon-link" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-images"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      Ámbar · 2026
+    </div>
+  </div>
+</footer>
+
   <script src="menu.js"></script>
 </body>
-
 </html>

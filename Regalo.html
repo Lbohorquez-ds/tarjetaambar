@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dónde y cuándo | Ámbar</title>
+  <title>Regalo | Ámbar</title>
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -26,10 +26,10 @@
 
         <ul class="menu" id="menu">
           <li class="menu-item"><a href="index.html" class="menu-link">Inicio</a></li>
-          <li class="menu-item"><a href="DondeCuando.html" class="menu-link menu-link_select">Dónde y cuándo</a></li>
+          <li class="menu-item"><a href="DondeCuando.html" class="menu-link">Dónde y cuándo</a></li>
           <li class="menu-item"><a href="DressCode.html" class="menu-link">Vestimenta</a></li>
           <li class="menu-item"><a href="Asistencia.html" class="menu-link">Asistencia</a></li>
-          <li class="menu-item"><a href="Regalo.html" class="menu-link">Regalo</a></li>
+          <li class="menu-item"><a href="Regalo.html" class="menu-link menu-link_select">Regalo</a></li>
         </ul>
       </div>
     </nav>
@@ -39,41 +39,7 @@
     <section class="page-section">
       <div class="contenedor">
         <div class="image-frame">
-          <img src="Fotos/Hora.jpeg" alt="Fecha y horario de la fiesta" class="full-image">
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="contenedor">
-        <div class="countdown-card">
-          <h2 class="countdown-title">Cuenta regresiva</h2>
-          <div class="contador" id="contador" data-target="2026-05-09T21:00:00">
-            <div class="contador-item">
-              <span class="contador-numero" id="dias">0</span>
-              <span class="contador-label">Días</span>
-            </div>
-            <div class="contador-item">
-              <span class="contador-numero" id="horas">0</span>
-              <span class="contador-label">Horas</span>
-            </div>
-            <div class="contador-item">
-              <span class="contador-numero" id="minutos">0</span>
-              <span class="contador-label">Minutos</span>
-            </div>
-            <div class="contador-item">
-              <span class="contador-numero" id="segundos">0</span>
-              <span class="contador-label">Segundos</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="contenedor">
-        <div class="image-frame">
-          <img src="Fotos/Lugar.jpg" alt="Ubicación del salón" class="full-image">
+          <img src="Fotos/Regalo.jpg" alt="Regalo" class="full-image">
         </div>
       </div>
     </section>
@@ -81,20 +47,29 @@
     <section class="page-section">
       <div class="contenedor">
         <div class="cta-card">
-          <h2>El camino hacia una noche mágica</h2>
-          <p>Para que no te pierdas, acá está la ubicación.</p>
+          <h2>Un detalle con mucho cariño</h2>
+          <p>Podés encontrar mis datos a continuación.</p>
           <div class="button-row">
-  <a href="https://maps.app.goo.gl/sXLmtuEzdWNBRMa48" class="elegant-button" target="_blank" rel="noopener noreferrer">
-    <i class="fa-solid fa-location-dot"></i>
-    Ver ubicación
-  </a>
-</div>
+            <button type="button" class="elegant-button" id="abrirAlias">
+              <i class="fa-solid fa-gift"></i>
+              Ver alias
+            </button>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-<footer class="footer-principal">
+  <div class="modal-simple" id="miModal" aria-hidden="true">
+    <div class="modal-simple-card">
+      <h3>Alias para transferencia</h3>
+      <p>Podés enviarlo a:</p>
+      <span class="alias-box">15ambarB</span>
+      <button type="button" class="elegant-button-secondary close-simple" id="cerrarAlias">Cerrar</button>
+    </div>
+  </div>
+
+ <footer class="footer-principal">
   <div class="contenedor">
     <div class="footer-linea"></div>
 
@@ -126,6 +101,26 @@
 </footer>
 
   <script src="menu.js"></script>
-  <script src="temporizador.js"></script>
+  <script>
+    const abrirAlias = document.getElementById('abrirAlias');
+    const cerrarAlias = document.getElementById('cerrarAlias');
+    const modalAlias = document.getElementById('miModal');
+
+    if (abrirAlias && cerrarAlias && modalAlias) {
+      abrirAlias.addEventListener('click', () => {
+        modalAlias.classList.add('is-visible');
+      });
+
+      cerrarAlias.addEventListener('click', () => {
+        modalAlias.classList.remove('is-visible');
+      });
+
+      modalAlias.addEventListener('click', (event) => {
+        if (event.target === modalAlias) {
+          modalAlias.classList.remove('is-visible');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
